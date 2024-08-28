@@ -1,4 +1,6 @@
-<?php 
+<?php
+
+use Hunterbr\DB\Sql;
 
 require_once("vendor/autoload.php");
 
@@ -8,7 +10,9 @@ $app->config('debug', true);
 
 $app->get('/', function() {
     
-	echo "OK";
+	$sql = new Sql();
+	$query= json_encode($sql->select("SELECT * FROM tb_users"));
+echo $query;
 
 });
 
