@@ -1,6 +1,6 @@
 <?php 
 
-namespace hunterbr\DB;
+namespace Hunterbr\DB;
 
 class Sql {
 
